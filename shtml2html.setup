@@ -1,0 +1,5 @@
+(run (csi -s shtml2html-eggdoc.scm > shtml2html-eggdoc.html))
+(compile shtml2html.scm)
+(install-program
+ 'shtml2html
+ "shtml2html") 
