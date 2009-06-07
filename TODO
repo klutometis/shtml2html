@@ -1,0 +1,5 @@
+# -*-mode: org;-*-
+* TODO library that exports xhtml roots (can't really use it, though,
+  unless the documents themselve are quasiquoted
+* TODO for efficiency's sake: could have ad-hoc executables for
+  each doctype; no option parsing, no bifurcations
