@@ -2,14 +2,11 @@
  htmlprag
  (srfi 37))
 
-(define doctype-roots
+(define doctypes
   `((xhtml-1.1
-     "<?xml version= \"1.0\" encoding= \"UTF-8\"?><!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">"
-     (html (@ (xmlns "http://www.w3.org/1999/xhtml")
-              (xml:lang "en"))))))
+     . "<?xml version= \"1.0\" encoding= \"UTF-8\"?><!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">")))
 
 (define default-doctype 'xhtml-1.1)
-(define default-document '(html))
 
 (let ((doctype #f))
   (let ((xhtml-1.1-option
@@ -27,16 +24,8 @@
               (error "unrecognized option" name))
             cons
             '())))
-      (let ((doctype-root (cdr (if doctype
-                                   (assq doctype doctype-roots)
-                                   (assq default-doctype doctype-roots)))))
-        (display (car doctype-root))
-        (let ((root (cadr doctype-root))
-              (document (read)))
-          (let ((rest-document (cdr (if (eof-object? document)
-                                        default-document
-                                        document))))
-            (write-shtml-as-html (append (cadr doctype-root)
-                                         (cdr (if (eof-object? document)
-                                                  default-document
-                                                  document))))))))))
+      (let ((doctype (cdr (if doctype
+                              (assq doctype doctypes)
+                              (assq default-doctype doctypes)))))
+        (display doctype)
+        (write-shtml-as-html (read))))))
