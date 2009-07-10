@@ -1,4 +1,6 @@
 # -*-mode: org;-*-
+* TODO should really make this a module so that the doctypes, etc.
+  are available for internal shtml->html handling
 * TODO library that exports xhtml roots (can't really use it, though,
   unless the documents themselve are quasiquoted
 * TODO for efficiency's sake: could have ad-hoc executables for
