@@ -10,4 +10,4 @@
  (license "GPL")
  (category web)
  (needs htmlprag
-        (srfi 37)))
+        srfi-37))
