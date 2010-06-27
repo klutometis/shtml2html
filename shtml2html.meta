@@ -1,13 +1,14 @@
-((synopsis "Reads shtml from stdin, stdouts {x}html")
- (author "Peter Danenberg")
- (files "shtml2html.setup"
-        "shtml2html.scm"
-        "shtml2html-eggdoc.html")
- (egg "shtml2html.egg")
+((egg "shtml2html.egg")
  (eggdoc "shtml2html-eggdoc.scm")
  (license "")
  (documentation "eggdoc.html")
  (license "GPL")
  (category web)
- (needs htmlprag
-        srfi-37))
+ (needs setup-helper
+        htmlprag
+        srfi-37)
+ (author "Peter Danenberg")
+ (synopsis "Reads shtml from stdin, stdouts {x}html")
+ (files "shtml2html.setup"
+        "shtml2html.scm"
+        "shtml2html-eggdoc.html"))
