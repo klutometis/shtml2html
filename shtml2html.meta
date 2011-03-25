@@ -6,7 +6,8 @@
  (category web)
  (needs setup-helper
         htmlprag
-        srfi-37)
+        srfi-37
+        eggdoc)
  (author "Peter Danenberg")
  (synopsis "Reads shtml from stdin, stdouts {x}html")
  (files "shtml2html.setup"
