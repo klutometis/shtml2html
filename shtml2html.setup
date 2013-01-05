@@ -1,7 +1,3 @@
-(compile -d0 -O2 -J -s shtml2html.scm)
-(compile -d0 -O2 -s shtml2html.import.scm)
-
-(install-extension
- 'shtml2html
- '("shtml2html.so" "shtml2html.import.so")
- '((version "0.0.1")))
+(compile "shtml2html.scm")
+(install-program 'shtml2html "shtml2html")
+(remove-file* "shtml2html")

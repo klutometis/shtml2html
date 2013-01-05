@@ -1,7 +1,8 @@
-((synopsis "Reads shtml from stdin, stdouts {x}html")
+((synopsis "Reads shtml from stdin, stdouts {x}html; suitable for e.g.
+Apache's mod_ext_filter.")
  (author "Peter Danenberg")
  (category web)
  (license "BSD")
- (depends)
+ (depends htmlprag)
  (test-depends)
  (foreign-depends))

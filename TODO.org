@@ -1,0 +1,13 @@
+* DONE untested with chicken 4
+  CLOSED: [2013-01-05 Sat 15:14]
+* CANCELED should really make this a module so that the doctypes, etc.
+  CLOSED: [2013-01-05 Sat 15:14]
+  - CLOSING NOTE [2013-01-05 Sat 15:14] \\
+    See [[https://github.com/klutometis/call-with-query][call-with-query]].
+  are available for internal shtml->html handling
+* CANCELED library that exports xhtml roots (can't really use it, though,
+  CLOSED: [2013-01-05 Sat 15:14]
+  unless the documents themselve are quasiquoted
+* DONE for efficiency's sake: could have ad-hoc executables for
+  CLOSED: [2013-01-05 Sat 15:14]
+  each doctype; no option parsing, no bifurcations
