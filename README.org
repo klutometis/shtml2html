@@ -1,0 +1,19 @@
+Add this to =httpd.conf=:
+
+#+BEGIN_EXAMPLE
+  AddType text/shtml .shtml
+  ExtFilterDefine shtml-to-html intype=text/shtml outtype=text/html cmd=/usr/local/bin/shtml2html
+  AddOutputFilter shtml-to-html shtml
+#+END_EXAMPLE
+
+Apache serves =.shtml=-files as HTML; for instance:
+
+#+BEGIN_SRC scheme
+  (html (p "Harro"))
+#+END_SRC
+
+becomes:
+
+#+BEGIN_SRC html
+  <!DOCTYPE html><html><p>Harro</p></html>
+#+END_SRC
